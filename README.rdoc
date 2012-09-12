@@ -1,3 +1,7 @@
 == The next big thing
 
 An application that let's you sign up for the next big thing.
+
+== Running the test suite
+
+`rake`
