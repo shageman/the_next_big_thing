@@ -1,7 +1,7 @@
-== The next big thing
+== The next big thing ![Build Status](https://secure.travis-ci.org/shageman/the_next_big_thing.png)
 
 An application that let's you sign up for the next big thing.
 
 == Running the test suite
 
-`rake`
+`./build.sh`

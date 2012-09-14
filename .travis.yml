@@ -1,0 +1,3 @@
+script: "./build.sh"
+rvm:
+  - 1.9.3
