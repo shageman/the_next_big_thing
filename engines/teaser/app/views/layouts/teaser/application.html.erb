@@ -1,14 +1,23 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
   <title>Teaser</title>
-  <%= stylesheet_link_tag    "teaser/application", :media => "all" %>
+  <%= stylesheet_link_tag "teaser/application", :media => "all" %>
   <%= javascript_include_tag "teaser/application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div id="header">
+  <%= content_for :header %>
+</div>
+<div id="top">
+  <%= content_for :top %>
+</div>
+<div id="center">
+  <%= yield %>
+</div>
+<div id="footer">
+  <%= content_for :footer %>
+</div>
 </body>
 </html>

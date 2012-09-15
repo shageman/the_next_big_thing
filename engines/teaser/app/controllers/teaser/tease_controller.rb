@@ -1,5 +1,5 @@
 module Teaser
-  class TeaseController < ActionController::Base
+  class TeaseController < Teaser::ApplicationController
     def index
     end
   end

@@ -1,0 +1,48 @@
+/*
+ * Colors from http://design-seeds.com/index.php/home/entry/a-door-green1
+ *
+ * Thanks to design seeds!
+ */
+
+$lightgreen: #e4e8ae;
+$browngreen: #786f27;
+$gray: #b5acad;
+$midgreen: #cfcb65;
+$darkgreen: #758559;
+
+/*
+ * You are allowed to do whatever you want with this layout. Though I would be pleased if you placed a link on your site to csseasy.com or to profit42.com (best "blog about hacking" ever). Donations are also welcome: paypal@profit42.com (or follow the donation button on csseasy.com)
+ *
+ * Thanks to css easy!
+ */
+
+body {
+  background-color: #dc8;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  background-color: #333;
+  height: 150px;
+}
+
+#top {
+  width: 100%;
+  background-color: #dc8;
+  height: 50px;
+}
+
+#center {
+  background-color: #eec;
+  min-height: 600px; /* for modern browsers */
+  height: auto !important; /* for modern browsers */
+  height: 600px; /* for IE5.x and IE6 */
+}
+
+#footer {
+  clear: both;
+  background-color: #333;
+  height: 100px;
+}
