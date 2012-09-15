@@ -1,3 +1,3 @@
-script: "./build.sh"
+script: "./build_on_travis.sh"
 rvm:
   - 1.9.3
