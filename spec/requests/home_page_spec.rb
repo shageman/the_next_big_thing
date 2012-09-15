@@ -8,7 +8,7 @@ feature "The Next Big Thing Homepage", %q{
 
   scenario "The Homepage" do
     visit "/"
-    page.should have_content("The next big Thing")
+    page.should have_content("The Next Big Thing")
     page.should have_content("Find nothing out about it right here!")
   end
 end
