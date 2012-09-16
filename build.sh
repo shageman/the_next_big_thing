@@ -1,3 +1,4 @@
+#!/bin/sh
 echo "*** Running container app specs"
 source ~/.rvm/scripts/rvm
 bundle exec rake db:migrate db:test:prepare rspec

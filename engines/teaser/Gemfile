@@ -1,8 +1,6 @@
 source "http://rubygems.org"
 gemspec
 
-gem "jquery-rails"
-
 gem "rspec-rails"
 gem "shoulda-matchers"
 

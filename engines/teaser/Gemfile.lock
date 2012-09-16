@@ -3,6 +3,7 @@ PATH
   specs:
     teaser (0.0.1)
       haml-rails
+      jquery-rails
       rails (~> 3.2.8)
       sass-rails
 
@@ -121,7 +122,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jquery-rails
   rspec-rails
   shoulda-matchers
   sqlite3

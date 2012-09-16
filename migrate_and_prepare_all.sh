@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# IMPORTANT: Source RVM as a function into local environment.
-#            Otherwise switching gemsets won't work.
 [ -s "$HOME/.rvm/scripts/rvm" ] && . "$HOME/.rvm/scripts/rvm"
 
 echo "migrating teaser"
