@@ -4,3 +4,6 @@ gemspec
 gem "jquery-rails"
 
 gem "rspec-rails"
+gem "shoulda-matchers"
+
+gem "sqlite3"
