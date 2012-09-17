@@ -2,10 +2,16 @@ PATH
   remote: engines/teaser
   specs:
     teaser (0.0.1)
+      annoyance
       haml-rails
       jquery-rails
       rails (~> 3.2.8)
       sass-rails
+
+PATH
+  remote: gems/annoyance
+  specs:
+    annoyance (0.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -160,6 +166,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annoyance!
   capybara
   jasmine
   poltergeist

@@ -3,7 +3,7 @@ source "https://rubygems.org"
 gem "rails"
 
 gem "teaser", path: "engines/teaser"
-
+gem "annoyance", path: "gems/annoyance"
 
 group :test, :development do
   gem "rspec-rails"

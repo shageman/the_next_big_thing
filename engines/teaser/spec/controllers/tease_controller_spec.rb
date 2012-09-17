@@ -22,11 +22,12 @@ module Teaser
       end
 
       it "should fail if the value given in the new_sign_up_entry parameter already exists in the database" do
-        Teaser::Entry.create!(email: "adam")
+        entry = Teaser::Entry.create!(email: "adam", tries: 0)
 
         xhr :post, :create, new_sign_up_entry: "adam", use_route: "teaser"
         response.status.should == 400
-        response.body.should == "Hm... something went wrong. Did you already sign up?"
+        response.body.should == "Hm... Did you already sign up?Huh?"
+        entry.reload.tries.should == 1
       end
 
       it "should fail if the new entry cannot be saved" do

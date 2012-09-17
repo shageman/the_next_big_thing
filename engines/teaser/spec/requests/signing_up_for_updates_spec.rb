@@ -1,4 +1,4 @@
-require "spec_helper"
+require "request_spec_helper"
 
 feature "Signing up for tnbt updates", %q{
   In order to stay informed about the next big thing
