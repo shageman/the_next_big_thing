@@ -14,7 +14,7 @@ rspec spec/models spec/controllers
 result+=$?
 
 echo "*** Running teaser engine request specs"
-rspec spec/reqests
+rspec spec/requests
 result+=$?
 
 echo "*** Running teaser engine javascript specs"

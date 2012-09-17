@@ -2,6 +2,10 @@ require "spec_helper"
 
 module Teaser
   describe TeaseController do
+    before do
+      controller.stub(:inject_dependencies)
+    end
+
     describe "GET new" do
       it "should not fail" do
         expect {
@@ -11,6 +15,12 @@ module Teaser
     end
 
     describe "POST create" do
+      it "should use the annoyance meter set to 20" do
+        controller.unstub(:inject_dependencies)
+        Annoyance::Meter.should_receive(:new).with(20)
+        xhr :post, :create, use_route: "teaser"
+      end
+
       it "should fail if no new_sign_up_entry parameter is given" do
         xhr :post, :create, use_route: "teaser"
         response.status.should == 400
@@ -21,12 +31,15 @@ module Teaser
         response.body.should == "Hey! Please call this right... I need a new signUp entry!"
       end
 
-      it "should fail if the value given in the new_sign_up_entry parameter already exists in the database" do
+      it "should fail if the given new_sign_up_entry already exists (and use the annoyance meter)" do
+        mock_annoyance_meter = mock("annoyance_meter", annoyance_adjusted: "Oh I am annoyed...")
+        controller.instance_variable_set "@annoyance_meter", mock_annoyance_meter
+
         entry = Teaser::Entry.create!(email: "adam", tries: 0)
 
         xhr :post, :create, new_sign_up_entry: "adam", use_route: "teaser"
         response.status.should == 400
-        response.body.should == "Hm... Did you already sign up?Huh?"
+        response.body.should == "Oh I am annoyed..."
         entry.reload.tries.should == 1
       end
 
