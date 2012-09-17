@@ -2,6 +2,8 @@ source "http://rubygems.org"
 gemspec
 
 gem "rspec-rails"
+gem "capybara"
 gem "shoulda-matchers"
-
 gem "sqlite3"
+gem "poltergeist"
+gem "jasmine"

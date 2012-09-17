@@ -10,6 +10,8 @@ group :test, :development do
   gem "capybara"
   gem "sqlite3"
 
-  #Development requirements of teaser engine
+  #Development requirements of teaser engine (for travis-ci)
   gem "shoulda-matchers"
+  gem "poltergeist"
+  gem "jasmine"
 end

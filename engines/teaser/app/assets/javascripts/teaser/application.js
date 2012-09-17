@@ -12,4 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ./teaser
 //= require_tree .
+//= require_self
+
+(new Teaser.SignUp).initialize('#signup', '#results', window.createTeaserUrl);

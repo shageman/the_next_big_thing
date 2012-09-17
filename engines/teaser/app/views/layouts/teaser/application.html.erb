@@ -3,7 +3,6 @@
 <head>
   <title>Teaser</title>
   <%= stylesheet_link_tag "teaser/application", :media => "all" %>
-  <%= javascript_include_tag "teaser/application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -25,4 +24,5 @@
   <%= content_for :footer %>
 </div>
 </body>
+<%= javascript_include_tag "teaser/application" %>
 </html>
