@@ -17,7 +17,8 @@ A sample project showcasing the use of unbuilt Rails Engines and Gems. The entir
 git clone https://github.com/shageman/the_next_big_thing.git
 cd the_next_big_thing
 bundle
-./build.sh```
+./build.sh
+```
 
 ## Contributing
 
