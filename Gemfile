@@ -15,3 +15,7 @@ group :test, :development do
   gem "poltergeist"
   gem "jasmine"
 end
+
+group :production do
+  gem "pg"
+end
