@@ -26,6 +26,12 @@ I highly appreciate it!
 
 Fork, pull, create, commit, push, request pull.
 
+### What to do?
+
+*   Get travis-ci to work again.
+*   Add an engine that will admin the submitted entries.
+*   ...
+
 ## License
 
     Copyright (c) 2012 Stephan Hagemann
