@@ -1,3 +1,6 @@
 script: "./build_on_travis.sh"
 rvm:
   - 1.9.3
+branches:
+  only:
+    - master
