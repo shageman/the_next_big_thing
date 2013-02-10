@@ -7,8 +7,6 @@ result=$?
 
 cd engines/teaser
 echo "*** Running teaser engine specs"
-source "$HOME/.rvm/scripts/rvm"
-bundle install
 bundle exec rake db:migrate app:db:test:prepare
 bundle exec rspec spec/models spec/controllers
 result+=$?
@@ -25,9 +23,14 @@ result+=$?
 cd ../..
 cd gems/annoyance
 echo "*** Running annoyance gem specs"
-bundle install
 bundle exec rspec spec
 result+=$?
 
+
+if [ $result -eq 0 ]; then
+	echo "SUCCESS"
+else
+	echo "FAILURE"
+fi
 
 exit $result
