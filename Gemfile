@@ -6,14 +6,14 @@ gem "teaser", path: "engines/teaser"
 gem "annoyance", path: "gems/annoyance"
 
 group :test, :development do
-  gem "rspec-rails"
-  gem "capybara"
-  gem "sqlite3"
+  gem "rspec-rails", "2.12.2"
+  gem "capybara", "1.1.4"
+  gem "sqlite3", "1.3.7"
 
   #Development requirements of teaser engine (for travis-ci)
-  gem "shoulda-matchers"
-  gem "poltergeist"
-  gem "jasmine"
+  gem "shoulda-matchers", "1.4.2"
+  gem "poltergeist", "1.0.2"
+  gem "jasmine", "1.3.1"
 end
 
 group :production do
