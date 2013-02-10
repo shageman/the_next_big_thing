@@ -4,6 +4,7 @@ require File.expand_path("../dummy/config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
 require 'capybara/rspec'
+require 'shoulda-matchers'
 
 Dir[Teaser::Engine.root.join("spec/support/**/*.rb")].each {|f| require f}
 
