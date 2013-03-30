@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "rails", "3.2.11"
+gem "rails", "3.2.13"
 
 gem "teaser", path: "engines/teaser"
 gem "annoyance", path: "gems/annoyance"
