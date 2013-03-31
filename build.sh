@@ -18,7 +18,7 @@ cd ../../engines/teaser
 echo "*** Running teaser engine non-request specs"
 bundle install > /dev/null
 bundle exec rake db:migrate app:db:test:prepare
-rspec spec/models spec/controllers
+rspec spec/controllers
 result+=$?
 
 echo "*** Running teaser engine request specs"

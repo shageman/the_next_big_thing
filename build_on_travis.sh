@@ -15,7 +15,7 @@ result+=$?
 cd ../../engines/teaser
 echo "*** Running teaser engine specs"
 bundle exec rake db:migrate app:db:test:prepare
-bundle exec rspec spec/models spec/controllers
+bundle exec rspec spec/controllers
 result+=$?
 
 echo "*** Running teaser engine request specs"
