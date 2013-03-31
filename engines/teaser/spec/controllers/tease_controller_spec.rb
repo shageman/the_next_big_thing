@@ -35,7 +35,7 @@ module Teaser
         mock_annoyance_meter = mock("annoyance_meter", annoyance_adjusted: "Oh I am annoyed...")
         controller.instance_variable_set "@annoyance_meter", mock_annoyance_meter
 
-        entry = Teaser::Entry.create!(email: "adam", tries: 0)
+        entry = NewsSignup::Entry.create!(email: "adam", tries: 0)
 
         xhr :post, :create, new_sign_up_entry: "adam", use_route: "teaser"
         response.status.should == 400
@@ -44,7 +44,7 @@ module Teaser
       end
 
       it "should fail if the new entry cannot be saved" do
-        Teaser::Entry.stub(:create).and_return(false)
+        NewsSignup::Entry.stub(:create).and_return(false)
 
         xhr :post, :create, new_sign_up_entry: "something unsaveable", use_route: "teaser"
         response.status.should == 500
@@ -52,7 +52,7 @@ module Teaser
       end
 
       it "should be a success if the new entry can be saved" do
-        Teaser::Entry.stub(:create).and_return(true)
+        NewsSignup::Entry.stub(:create).and_return(true)
 
         xhr :post, :create, new_sign_up_entry: "something unsaveable", use_route: "teaser"
         response.status.should == 200
