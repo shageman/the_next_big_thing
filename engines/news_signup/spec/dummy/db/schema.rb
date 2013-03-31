@@ -20,11 +20,4 @@ ActiveRecord::Schema.define(:version => 20130331124429) do
     t.integer  "tries",      :default => 0
   end
 
-  create_table "teaser_entries", :force => true do |t|
-    t.string   "email"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
-    t.integer  "tries",      :default => 0
-  end
-
 end

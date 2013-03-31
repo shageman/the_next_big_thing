@@ -7,7 +7,14 @@ rspec spec
 result=$?
 
 
-cd engines/teaser
+cd engines/news_signup
+echo "*** Running news signup engine specs"
+bundle exec rake db:migrate app:db:test:prepare
+bundle exec rspec spec/models
+result+=$?
+
+
+cd ../../engines/teaser
 echo "*** Running teaser engine non-request specs"
 bundle install > /dev/null
 bundle exec rake db:migrate app:db:test:prepare

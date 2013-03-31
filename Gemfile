@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem "rails", "3.2.13"
 
+gem "news_signup", path: "engines/news_signup"
 gem "teaser", path: "engines/teaser"
 gem "annoyance", path: "gems/annoyance"
 
