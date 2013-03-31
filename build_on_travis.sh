@@ -5,7 +5,7 @@ bundle exec rspec spec
 result=$?
 
 
-cd engines/news_signup
+cd engines/email_signup
 echo "*** Running news signup engine specs"
 bundle exec rake db:migrate app:db:test:prepare
 bundle exec rspec spec/models
