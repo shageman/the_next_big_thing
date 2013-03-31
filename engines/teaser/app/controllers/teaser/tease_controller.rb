@@ -15,7 +15,7 @@ module Teaser
         render(
             text: @annoyance_meter.annoyance_adjusted("Hm... Did you already sign up?", similar_exisiting_entry.tries),
             status: 400) and return
-      elsif @entry_manager.create(email: email, tries: 0)
+      elsif @entry_manager.create(email)
         render text: "Thanks for signing up!", status: 200
       else
         render text: "Hm... something went seriously wrong.", status: 500

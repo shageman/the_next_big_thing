@@ -8,6 +8,13 @@ module EmailSignup
           subject.create "some_email@example.com"
         }.to change(Entry, :count).from(0).to(1)
       end
+
+      it "does not create an entry with the same email address twice" do
+        subject.create "some_email@example.com"
+        expect {
+          subject.create("some_email@example.com").should == nil
+        }.to_not change(Entry, :count)
+      end
     end
 
     describe "#find_by_email" do
