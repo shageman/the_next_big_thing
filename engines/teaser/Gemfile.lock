@@ -1,17 +1,24 @@
 PATH
+  remote: .
+  specs:
+    teaser (0.0.1)
+      annoyance
+      email_signup
+      haml-rails (= 0.3.5)
+      jquery-rails (= 2.2.1)
+      rails (= 3.2.13)
+      sass-rails (= 3.2.6)
+
+PATH
   remote: ../../gems/annoyance
   specs:
     annoyance (0.0.1)
 
 PATH
-  remote: .
+  remote: ../email_signup
   specs:
-    teaser (0.0.1)
-      annoyance
-      haml-rails (= 0.3.5)
-      jquery-rails (= 2.2.1)
-      rails (= 3.2.13)
-      sass-rails (= 3.2.6)
+    email_signup (0.0.1)
+      rails (~> 3.2.13)
 
 GEM
   remote: http://rubygems.org/
@@ -173,6 +180,7 @@ PLATFORMS
 DEPENDENCIES
   annoyance!
   capybara
+  email_signup!
   jasmine
   poltergeist
   rspec-rails

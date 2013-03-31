@@ -53,7 +53,7 @@ GEM
     mocha (0.13.3)
       metaclass (~> 0.0.1)
     multi_json (1.7.2)
-    pg (0.14.1)
+    pg (0.15.0)
     polyglot (0.3.3)
     rack (1.4.5)
     rack-cache (1.2)
