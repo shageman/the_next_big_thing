@@ -11,9 +11,9 @@ module Teaser
       render text: "Hey! Please call this right... I need a new signUp entry!", status: 400 and return unless email
 
       if similar_exisiting_entry = @entry_manager.find_by_email(email)
-        similar_exisiting_entry.update_attribute(:tries, similar_exisiting_entry.tries + 1)
+        tries = @event_counter.log("email_signup_entry_#{similar_exisiting_entry.id}", "signup")
         render(
-            text: @annoyance_meter.annoyance_adjusted("Hm... Did you already sign up?", similar_exisiting_entry.tries),
+            text: @annoyance_meter.annoyance_adjusted("Hm... Did you already sign up?", tries),
             status: 400) and return
       elsif @entry_manager.create(email)
         render text: "Thanks for signing up!", status: 200
@@ -27,6 +27,7 @@ module Teaser
     def inject_dependencies
       @entry_manager = EmailSignup::EntryManager.new
       @annoyance_meter = Annoyance::Meter.new(20)
+      @event_counter = EventCounter::Logger.new
     end
   end
 end

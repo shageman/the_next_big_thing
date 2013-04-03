@@ -36,13 +36,16 @@ module Teaser
         controller.instance_variable_set "@annoyance_meter", mock_annoyance_meter
         entry_manager = EmailSignup::EntryManager.new
         controller.instance_variable_set "@entry_manager", entry_manager
+        event_counter = EventCounter::Logger.new
+        controller.instance_variable_set "@event_counter", event_counter
 
         entry = entry_manager.create "adam"
+        event_counter.log "email_signup_entry_#{entry.id}", "signup"
 
         xhr :post, :create, new_sign_up_entry: "adam", use_route: "teaser"
         response.status.should == 400
         response.body.should == "Oh I am annoyed..."
-        entry.reload.tries.should == 1
+        EventCounter::Logger::Count.first.count.should == 2
       end
 
       it "should fail if the new entry cannot be saved" do

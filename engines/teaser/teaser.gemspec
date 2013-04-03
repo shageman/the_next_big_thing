@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "annoyance"
   s.add_dependency "email_signup"
+  s.add_dependency "event_counter"
 
   s.add_development_dependency "rspec-rails", "2.12.2"
   s.add_development_dependency "capybara", "1.1.4"

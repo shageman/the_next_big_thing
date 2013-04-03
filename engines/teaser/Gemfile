@@ -10,3 +10,4 @@ gem "jasmine"
 
 gem "annoyance", path: "../../gems/annoyance"
 gem "email_signup", path: "../email_signup"
+gem "event_counter", path: "../event_counter"

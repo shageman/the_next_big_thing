@@ -4,6 +4,7 @@ PATH
     teaser (0.0.1)
       annoyance
       email_signup
+      event_counter
       haml-rails (= 0.3.5)
       jquery-rails (= 2.2.1)
       rails (= 3.2.13)
@@ -19,6 +20,12 @@ PATH
   specs:
     email_signup (0.0.1)
       rails (~> 3.2.13)
+
+PATH
+  remote: ../event_counter
+  specs:
+    event_counter (0.0.1)
+      rails (= 3.2.13)
 
 GEM
   remote: http://rubygems.org/
@@ -181,6 +188,7 @@ DEPENDENCIES
   annoyance!
   capybara
   email_signup!
+  event_counter!
   jasmine
   poltergeist
   rspec-rails
