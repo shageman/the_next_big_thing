@@ -8,8 +8,10 @@ A full-fledged portal to announce the next big thing! Jumpstart the PR campaign 
 
 A sample project showcasing the use of unbuilt Rails Engines and Gems. The entire app has been developed using TDD - follow the commits to see the parts evolve. Current state:
 
-*   The main page is delivered by the `Teaser` Engine: `engines/teaser`
-*   The `Annoyance` service is provided by the `Annoyance` gem: `gems/annoyance`
+*   `Teaser` provides the web page one sees when running the the_next_big_thing server. It depends on all the other engines.
+*   `Annoyance` contains a service that given a number will give an indication of how annoying that number is.
+*   `EmailSignup` provides a service allowing the storage of email addresses.
+*   `EventCounter` provides a service that can count for any object how many times a particular action has happened.
 *   The main Rails application does not contain any application code: it does not even have an `app` directory. It is soley responsible for encapsulating and mounting the engine in the right place.
 
 ## Running the test suite
@@ -25,11 +27,6 @@ bundle
 I highly appreciate it!
 
 Fork, pull, create, commit, push, request pull.
-
-### What to do?
-
-*   Add an engine that will admin the submitted entries.
-*   ...
 
 ## License
 
