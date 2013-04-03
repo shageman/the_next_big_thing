@@ -33,7 +33,7 @@ Fork, pull, create, commit, push, request pull.
 
 ## License
 
-    Copyright (c) 2012 Stephan Hagemann
+    Copyright (c) 2012-2013 Stephan Hagemann
     twitter.com/shageman
     %w(stephan.hagemann gmail.com) * "@"
 
