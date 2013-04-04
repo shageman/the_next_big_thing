@@ -3,7 +3,7 @@ echo "*** Running container app specs"
 source ~/.rvm/scripts/rvm
 bundle install > /dev/null
 bundle exec rake db:migrate db:test:prepare
-rspec spec
+bundle exec rspec spec
 result=$?
 
 
