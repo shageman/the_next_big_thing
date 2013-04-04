@@ -16,7 +16,7 @@ describe TeaseController do
   describe "POST create" do
     it "should use the annoyance meter set to 20" do
       controller.unstub!(:inject_dependencies)
-      AnnoyanceMeter.should_receive(:new).with(20)
+      Annoyance::Meter.should_receive(:new).with(20)
       xhr :post, :create, use_route: "teaser"
     end
 
@@ -34,7 +34,7 @@ describe TeaseController do
       mock_annoyance_meter = mock("annoyance_meter", annoyance_adjusted: "Oh I am annoyed...")
       controller.instance_variable_set "@annoyance_meter", mock_annoyance_meter
 
-      entry = Entry.create!(email: "adam", tries: 0)
+      entry = EmailSignup::Entry.create!(email: "adam", tries: 0)
 
       xhr :post, :create, new_sign_up_entry: "adam", use_route: "teaser"
       response.status.should == 400
@@ -43,7 +43,7 @@ describe TeaseController do
     end
 
     it "should fail if the new entry cannot be saved" do
-      Entry.stub(:create).and_return(false)
+      EmailSignup::Entry.stub(:create).and_return(false)
 
       xhr :post, :create, new_sign_up_entry: "something unsaveable", use_route: "teaser"
       response.status.should == 500
@@ -51,7 +51,7 @@ describe TeaseController do
     end
 
     it "should be a success if the new entry can be saved" do
-      Entry.stub(:create).and_return(true)
+      EmailSignup::Entry.stub(:create).and_return(true)
 
       xhr :post, :create, new_sign_up_entry: "something unsaveable", use_route: "teaser"
       response.status.should == 200

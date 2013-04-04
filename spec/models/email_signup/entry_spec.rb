@@ -1,5 +1,5 @@
 require "spec_helper"
 
-describe Entry do
+describe EmailSignup::Entry do
   it { should validate_presence_of :email }
 end

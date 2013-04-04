@@ -7,7 +7,7 @@ feature "Signing up for tnbt updates", %q{
 } do
 
   background do
-    Entry.delete_all
+    EmailSignup::Entry.delete_all
   end
 
   scenario "sign up", js: "true" do
@@ -18,6 +18,6 @@ feature "Signing up for tnbt updates", %q{
       press_key_on_selector(13, "#signup")
 
       page.should have_content "Thanks for signing up!"
-    }.to change(Entry, :count).from(0).to(1)
+    }.to change(EmailSignup::Entry, :count).from(0).to(1)
   end
 end
