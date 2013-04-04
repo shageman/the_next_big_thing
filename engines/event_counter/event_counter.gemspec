@@ -7,11 +7,11 @@ require "event_counter/version"
 Gem::Specification.new do |s|
   s.name        = "event_counter"
   s.version     = EventCounter::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of EventCounter."
-  s.description = "TODO: Description of EventCounter."
+  s.authors     = ["Stephan Hagemann"]
+  s.email       = ["stephan@pivotallabs.com"]
+  s.homepage    = "https://github.com/shageman/event_counter"
+  s.summary     = "Rails engine to count the occurences of events on objects."
+  s.description = "This engine is part of a rails-architcture-sample app, which you can find at https://github.com/shageman/the_next_big_thing"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 
