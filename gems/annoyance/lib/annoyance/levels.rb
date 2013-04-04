@@ -10,7 +10,7 @@ module Annoyance
         "Come on, this is nonsense!",
         "I have almost had enough!",
         "Really?",
-        %q{<img src="http://gifs.gifbin.com/3sw8sw94405.gif" alt="Hairdo" title="Hairdo" class="gif" style="margin: 0 10px;">}
+        %q{<img src="/assets/teaser/hair.gif" alt="Hairdo" title="Hairdo" class="gif" style="margin: 0 10px;">}
     ]
   end
 end
