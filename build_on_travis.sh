@@ -12,13 +12,6 @@ bundle exec rspec spec/models
 result+=$?
 
 
-cd ../../engines/event_counter
-echo "*** Running event counter engine specs"
-bundle exec rake db:migrate app:db:test:prepare
-bundle exec rspec spec/models
-result+=$?
-
-
 cd ../../engines/teaser
 echo "*** Running teaser engine specs"
 bundle exec rake db:migrate app:db:test:prepare

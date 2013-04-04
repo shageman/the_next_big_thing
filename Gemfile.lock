@@ -5,18 +5,12 @@ PATH
       rails (~> 3.2.13)
 
 PATH
-  remote: engines/event_counter
-  specs:
-    event_counter (0.0.1)
-      rails (= 3.2.13)
-
-PATH
   remote: engines/teaser
   specs:
     teaser (0.0.1)
       annoyance
       email_signup
-      event_counter
+      event_counter (= 0.0.1)
       haml-rails (= 0.3.5)
       jquery-rails (= 2.2.1)
       rails (= 3.2.13)
@@ -72,6 +66,8 @@ GEM
       ffi (~> 1.0, >= 1.0.11)
     diff-lcs (1.1.3)
     erubis (2.7.0)
+    event_counter (0.0.1)
+      rails (= 3.2.13)
     eventmachine (1.0.3)
     faye-websocket (0.4.7)
       eventmachine (>= 0.12.0)
@@ -191,7 +187,6 @@ DEPENDENCIES
   annoyance!
   capybara (= 1.1.4)
   email_signup!
-  event_counter!
   jasmine (= 1.3.1)
   pg
   poltergeist (= 1.0.2)

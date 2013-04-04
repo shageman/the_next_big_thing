@@ -20,9 +20,10 @@ Gem::Specification.new do |s|
   s.add_dependency "sass-rails", "3.2.6"
   s.add_dependency "jquery-rails", "2.2.1"
 
+  s.add_dependency "event_counter", "0.0.1"
+
   s.add_dependency "annoyance"
   s.add_dependency "email_signup"
-  s.add_dependency "event_counter"
 
   s.add_development_dependency "rspec-rails", "2.12.2"
   s.add_development_dependency "capybara", "1.1.4"

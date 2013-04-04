@@ -4,7 +4,6 @@ gem "rails", "3.2.13"
 
 gem "email_signup", path: "engines/email_signup"
 gem "teaser", path: "engines/teaser"
-gem "event_counter", path: "engines/event_counter"
 gem "annoyance", path: "gems/annoyance"
 
 group :test, :development do
