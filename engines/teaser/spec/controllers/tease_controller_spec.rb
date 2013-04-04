@@ -17,7 +17,7 @@ module Teaser
     describe "POST create" do
       it "should use the annoyance meter set to 20" do
         controller.unstub!(:inject_dependencies)
-        Annoyance::Meter.should_receive(:new).with(20)
+        Annoyance::Meter.should_receive(:new).with(10)
         xhr :post, :create, use_route: "teaser"
       end
 

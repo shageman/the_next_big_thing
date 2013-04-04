@@ -26,7 +26,7 @@ module Teaser
 
     def inject_dependencies
       @entry_manager = EmailSignup::EntryManager.new
-      @annoyance_meter = Annoyance::Meter.new(20)
+      @annoyance_meter = Annoyance::Meter.new(10)
       @event_counter = EventCounter::Logger.new
     end
   end
