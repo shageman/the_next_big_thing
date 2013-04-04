@@ -1,3 +1,4 @@
 TheNextBigThing::Application.routes.draw do
-  mount Teaser::Engine => "/"
+  resources "tease", only: [:new, :create]
+  root :to => 'tease#new'
 end

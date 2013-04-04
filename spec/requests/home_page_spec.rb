@@ -1,4 +1,4 @@
-require "spec_helper"
+require "request_spec_helper"
 
 feature "The Next Big Thing Homepage", %q{
   In order to get informed about the next big thing
