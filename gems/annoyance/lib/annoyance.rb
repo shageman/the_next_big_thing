@@ -1,5 +1,4 @@
-require "annoyance/meter"
-require "annoyance/levels"
+require 'annoyance/engine' if defined?(Rails)
 
 module Annoyance
 end

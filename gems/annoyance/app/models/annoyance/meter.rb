@@ -13,10 +13,10 @@ module Annoyance
 
       repetition_count -= 1
 
-      index = repetition_count * Annoyance.levels.count/limit.to_f
-      index_to_access = [index, Annoyance.levels.count - 1].min
+      index = repetition_count * Annoyance::Levels.levels.count/limit.to_f
+      index_to_access = [index, Annoyance::Levels.levels.count - 1].min
 
-      annoyance_level = Annoyance.levels[index_to_access]
+      annoyance_level = Annoyance::Levels.levels[index_to_access]
       annoyance_level + what_to_duplicate(repetition_count, annoyance_level) * emphasis(repetition_count, index)
     end
 

@@ -1,4 +1,4 @@
-require File.expand_path("../../../lib/annoyance", __FILE__)
+require File.expand_path("../../../app/models/annoyance/meter", __FILE__)
 
 module Annoyance
   describe Annoyance::Meter do
@@ -15,7 +15,7 @@ module Annoyance
 
     describe "#annoyance_level" do
       before do
-        Annoyance.stub(:levels).and_return(
+        Annoyance::Levels.stub(:levels).and_return(
             [
                 "level 1!",
                 "level 2!",
@@ -74,7 +74,7 @@ module Annoyance
 
     describe "#annoyance_adjusted" do
       before do
-        Annoyance.stub(:levels).and_return(
+        Annoyance::Levels.stub(:levels).and_return(
             [
                 "level 1!",
                 "level 2!"
