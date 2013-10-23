@@ -4,6 +4,9 @@ cache:
   directories:
   - $HOME/vendor/bundle
 env: BUNDLE_PATH=$HOME/vendor/bundle
+before_install:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
 rvm:
   - 1.9.3
   - 2.0
