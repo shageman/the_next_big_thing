@@ -7,11 +7,10 @@ require "annoyance/version"
 Gem::Specification.new do |s|
   s.name        = "annoyance"
   s.version     = Annoyance::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Annoyance."
-  s.description = "TODO: Description of Annoyance."
+  s.authors     = ["Stephan Hagemann"]
+  s.email       = ["stephan.hagemann@gmail.com"]
+  s.summary     = "A very annoyed gem"
+  s.description = "A very annoyed gem"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["spec/**/*"]

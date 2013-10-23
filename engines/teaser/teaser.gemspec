@@ -7,11 +7,10 @@ require "teaser/version"
 Gem::Specification.new do |s|
   s.name        = "teaser"
   s.version     = Teaser::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Teaser."
-  s.description = "TODO: Description of Teaser."
+  s.authors     = ["Stephan Hagemann"]
+  s.email       = ["stephan.hagemann@gmail.com"]
+  s.summary     = "Teaser gem"
+  s.description = "Teaser gem"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 

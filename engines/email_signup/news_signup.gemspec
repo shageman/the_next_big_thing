@@ -7,11 +7,10 @@ require "email_signup/version"
 Gem::Specification.new do |s|
   s.name        = "email_signup"
   s.version     = EmailSignup::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of EmailSignup."
-  s.description = "TODO: Description of EmailSignup."
+  s.authors     = ["Stephan Hagemann"]
+  s.email       = ["stephan.hagemann@gmail.com"]
+  s.summary     = "The engine that is doing signup"
+  s.description = "The engine that is doing signup"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 
