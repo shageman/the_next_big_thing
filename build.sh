@@ -8,7 +8,7 @@ if [ "$CI" == "true" ]; then
 fi
 
 for test_script in $(find . -name test.sh); do
-  pushd `dirname test_script` > /dev/null
+  pushd `dirname $test_script` > /dev/null
   ./test.sh
   result+=$?
   popd > /dev/null
