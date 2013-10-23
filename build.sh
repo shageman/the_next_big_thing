@@ -1,3 +1,8 @@
+export BUNDLE_PATH="$HOME/vendor/bundle"
+export BUNDLE_GEMFILE=$PWD/Gemfile
+BUNDLE_OPTIONS=""
+unset BUNDLE_GEMFILE
+
 #!/bin/sh
 echo "*** Running container app specs"
 source ~/.rvm/scripts/rvm
@@ -9,6 +14,7 @@ result=$?
 
 cd engines/email_signup
 echo "*** Running news signup engine specs"
+bundle install > /dev/null
 bundle exec rake db:migrate app:db:test:prepare
 bundle exec rspec spec/models
 result+=$?
@@ -26,6 +32,7 @@ rspec spec/requests
 result+=$?
 
 echo "*** Running teaser engine javascript specs"
+bundle install > /dev/null
 bundle exec rake app:jasmine:ci
 result+=$?
 
