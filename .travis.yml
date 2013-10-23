@@ -1,8 +1,9 @@
-script: "./build_on_travis.sh"
+script: "./build.sh"
 cache:
   bundler: true
   directories:
   - $HOME/vendor/bundle
+env: BUNDLE_PATH=$HOME/vendor/bundle
 rvm:
   - 1.9.3
   - 2.0
