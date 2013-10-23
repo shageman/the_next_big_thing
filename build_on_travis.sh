@@ -1,3 +1,8 @@
+export BUNDLE_PATH="$HOME/vendor/bundle"
+export BUNDLE_GEMFILE=$PWD/Gemfile
+BUNDLE_OPTIONS=""
+unset BUNDLE_GEMFILE
+
 #!/bin/sh
 echo "*** Running container app specs"
 bundle exec rake db:migrate db:test:prepare
