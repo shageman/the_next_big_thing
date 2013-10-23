@@ -1,4 +1,8 @@
-script: "./build.sh"
+script: "./build_on_travis.sh"
+cache:
+  bundler: true
+  directories:
+  - $HOME/vendor/bundle
 rvm:
   - 1.9.3
   - 2.0
