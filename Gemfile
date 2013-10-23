@@ -9,7 +9,7 @@ gem "annoyance", path: "gems/annoyance"
 group :test, :development do
   gem "rspec-rails", "2.14.0"
   gem "capybara", "2.1.0"
-  gem "sqlite3", "1.3.7"
+  gem "sqlite3", "1.3.8"
 end
 
 group :production do
