@@ -102,7 +102,7 @@ GEM
       metaclass (~> 0.0.1)
     multi_json (1.7.2)
     nokogiri (1.5.9)
-    pg (0.15.0)
+    pg (0.17.0)
     poltergeist (1.0.2)
       capybara (~> 1.1)
       childprocess (~> 0.3)
