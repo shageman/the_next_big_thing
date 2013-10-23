@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "*** Running container app specs"
-bundle
+bundle install --no-deployment --path=$HOME/vendor/bundle | grep Installing
 bundle exec rake db:migrate db:test:prepare
 bundle exec rspec spec
 result=$?
@@ -8,7 +8,7 @@ result=$?
 
 cd engines/email_signup
 echo "*** Running news signup engine specs"
-bundle | grep Installing
+bundle install --no-deployment --path=$HOME/vendor/bundle | grep Installing
 bundle exec rake db:migrate app:db:test:prepare
 bundle exec rspec spec/models
 result+=$?
@@ -16,7 +16,7 @@ result+=$?
 
 cd ../../engines/teaser
 echo "*** Running teaser engine specs"
-bundle | grep Installing
+bundle install --no-deployment --path=$HOME/vendor/bundle | grep Installing
 bundle exec rake db:migrate app:db:test:prepare
 bundle exec rspec spec/controllers
 result+=$?
@@ -33,7 +33,7 @@ result+=$?
 cd ../..
 cd gems/annoyance
 echo "*** Running annoyance gem specs"
-bundle | grep Installing
+bundle install --no-deployment --path=$HOME/vendor/bundle | grep Installing
 bundle exec rspec spec
 result+=$?
 
