@@ -1,9 +1,7 @@
-#!/bin/sh
-source ~/.rvm/scripts/rvm
-bundle
-cd engines/teaser
-bundle
-cd ../email_signup
-bundle
-cd ../../gems/annoyance
-bundle
+#!/bin/bash
+
+for gemfile in $(find . -name Gemfile); do
+  pushd `dirname $gemfile`
+  bundle
+  popd
+done
