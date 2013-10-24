@@ -11,7 +11,7 @@ feature "Signing up for tnbt updates", %q{
   end
 
   scenario "sign up", js: "true" do
-    visit "/teaser"
+    visit teaser.root_path
 
     expect {
       fill_in "signup", with: "stephan@pivotallabs.com"

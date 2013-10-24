@@ -21,11 +21,6 @@ cd the_next_big_thing
 ./build.sh
 ```
 
-##Issues
-*    gems need update
-*    there is a solution to the gem requirement problem on travis
-*    it is possible to use route helpers in engines
-
 ## Contributing
 
 I highly appreciate it!
