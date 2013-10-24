@@ -16,7 +16,7 @@ module Teaser
 
     describe "POST create" do
       it "should use the annoyance meter set to 20" do
-        controller.unstub!(:inject_dependencies)
+        controller.unstub(:inject_dependencies)
         Annoyance::Meter.should_receive(:new).with(10)
         xhr :post, :create, use_route: "teaser"
       end
@@ -32,7 +32,7 @@ module Teaser
       end
 
       it "should fail if the given new_sign_up_entry already exists (and use the annoyance meter)" do
-        mock_annoyance_meter = mock("annoyance_meter", annoyance_adjusted: "Oh I am annoyed...")
+        mock_annoyance_meter = double("annoyance_meter", annoyance_adjusted: "Oh I am annoyed...")
         controller.instance_variable_set "@annoyance_meter", mock_annoyance_meter
         entry_manager = EmailSignup::EntryManager.new
         controller.instance_variable_set "@entry_manager", entry_manager
@@ -49,7 +49,7 @@ module Teaser
       end
 
       it "should fail if the new entry cannot be saved" do
-        entry_manager = mock("entry_manager", create: false, find_by_email: nil)
+        entry_manager = double("entry_manager", create: false, find_by_email: nil)
         controller.instance_variable_set "@entry_manager", entry_manager
 
         xhr :post, :create, new_sign_up_entry: "something unsaveable", use_route: "teaser"
@@ -58,7 +58,7 @@ module Teaser
       end
 
       it "should be a success if the new entry can be saved" do
-        entry_manager = mock("entry_manager", create: true, find_by_email: nil)
+        entry_manager = double("entry_manager", create: true, find_by_email: nil)
         controller.instance_variable_set "@entry_manager", entry_manager
 
         xhr :post, :create, new_sign_up_entry: "something unsaveable", use_route: "teaser"

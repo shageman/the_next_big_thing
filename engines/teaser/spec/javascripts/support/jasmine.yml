@@ -39,6 +39,7 @@ stylesheets:
 #
 helpers:
   - helpers/**/*.js
+  - helpers/mock-ajax.js
 
 # spec_files
 #

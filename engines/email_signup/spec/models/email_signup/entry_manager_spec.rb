@@ -2,6 +2,10 @@ require "spec_helper"
 
 module EmailSignup
   describe EmailSignup::EntryManager do
+    before do
+      Entry.delete_all
+    end
+    
     describe "#create" do
       it "creates an entry" do
         expect {
