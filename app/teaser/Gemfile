@@ -9,5 +9,5 @@ gem "poltergeist"
 gem 'jasmine-core', github: 'pivotal/jasmine'
 gem 'jasmine', github: 'pivotal/jasmine-gem'
 
-gem "annoyance", path: "../../gems/annoyance"
+gem "annoyance", path: "../../domain/annoyance"
 gem "email_signup", path: "../email_signup"

@@ -19,10 +19,4 @@ ActiveRecord::Schema.define(version: 20130403220851) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "event_counter_counts", force: true do |t|
-    t.string  "object_identifier"
-    t.string  "event_identifier"
-    t.integer "count",             default: 0
-  end
-
 end

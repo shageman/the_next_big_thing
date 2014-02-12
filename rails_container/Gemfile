@@ -2,9 +2,9 @@ source "https://rubygems.org"
 
 gem "rails", "4.0.0"
 
-gem "email_signup", path: "engines/email_signup"
-gem "teaser", path: "engines/teaser"
-gem "annoyance", path: "gems/annoyance"
+gem "email_signup", path: "../app/email_signup"
+gem "teaser", path: "../app/teaser"
+gem "annoyance", path: "../domain/annoyance"
 
 group :test, :development do
   gem "rspec-rails", "2.14.0"
