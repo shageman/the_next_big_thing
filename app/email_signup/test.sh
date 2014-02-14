@@ -2,7 +2,7 @@
 
 exit_code=0
 
-echo "*** Running news signup engine specs"
+echo "*** Running email signup engine specs"
 bundle install | grep Installing
 bundle exec rake db:migrate app:db:test:prepare
 bundle exec rspec spec/models
