@@ -21,4 +21,4 @@ PLATFORMS
 
 DEPENDENCIES
   annoyance!
-  rspec (= 2.14)
+  rspec
