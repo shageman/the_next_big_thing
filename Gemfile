@@ -1,0 +1,1 @@
+/Users/stephan/workspace/the_next_big_thing/rails_container/Gemfile
