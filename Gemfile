@@ -1,9 +1,10 @@
 source "https://rubygems.org"
 ruby "2.1.0"
 
-gem "rails", "4.0.0"
+gem "rails", "4.0.3"
 
 gem "email_signup", path: "components/email_signup"
+gem "event_counter", path: "components/event_counter"
 gem "teaser", path: "components/teaser"
 gem "annoyance", path: "components/annoyance"
 
