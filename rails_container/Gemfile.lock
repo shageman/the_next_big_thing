@@ -1,22 +1,22 @@
 PATH
-  remote: components/annoyance
+  remote: ../components/annoyance
   specs:
     annoyance (0.0.1)
 
 PATH
-  remote: components/email_signup
+  remote: ../components/email_signup
   specs:
     email_signup (0.0.1)
       rails (= 4.0.3)
 
 PATH
-  remote: components/event_counter
+  remote: ../components/event_counter
   specs:
     event_counter (0.0.3)
       rails (= 4.0.3)
 
 PATH
-  remote: components/teaser
+  remote: ../components/teaser
   specs:
     teaser (0.0.1)
       annoyance
