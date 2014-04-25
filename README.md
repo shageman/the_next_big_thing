@@ -14,6 +14,22 @@ A sample project showcasing the use of unbuilt Rails Engines and Gems. The entir
 *   `EventCounter` provides a service that can count for any object how many times a particular action has happened.
 *   The main Rails application does not contain any application code: it does not even have an `app` directory. It is soley responsible for encapsulating and mounting the engine in the right place.
 
+##Resources on component-based Rails applications
+Twitter hashtag: #cbra - https://twitter.com/hashtag/cbra
+
+Blog posts:
+
+* http://pivotallabs.com/tag/rails-application-suites/
+ 
+Past presentations by Ben Smith and me (mostly on this topic)
+
+* http://confreaks.com/presenters/790-stephan-hagemann
+* http://confreaks.com/presenters/784-ben-smith
+ 
+The book I am writing
+
+* https://leanpub.com/cbra
+
 ## Running the test suite
 ```bash
 git clone https://github.com/shageman/the_next_big_thing.git
