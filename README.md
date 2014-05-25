@@ -28,7 +28,7 @@ Past presentations by Ben Smith and me (mostly on this topic)
  
 The book I am writing
 
-* https://leanpub.com/cbra
+* https://leanpub.com/cobra
 
 ## Running the test suite
 ```bash
