@@ -15,7 +15,7 @@ A sample project showcasing the use of unbuilt Rails Engines and Gems. The entir
 *   The main Rails application does not contain any application code: it does not even have an `app` directory. It is soley responsible for encapsulating and mounting the engine in the right place.
 
 ##Resources on component-based Rails applications
-Twitter hashtag: #cbra - https://twitter.com/hashtag/cbra
+Twitter hashtag: #cobra - https://twitter.com/hashtag/cobra
 
 Blog posts:
 
