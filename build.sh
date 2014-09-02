@@ -9,6 +9,10 @@ fi
 
 for test_script in $(find . -name test.sh); do
   pushd `dirname $test_script` > /dev/null
+  source "$HOME/.rvm/scripts/rvm"
+  rvm use $(cat .ruby-version)@$(cat .ruby-gemset) --create
+  which ruby
+  rvm gemset name
   ./test.sh
   result+=$?
   popd > /dev/null
