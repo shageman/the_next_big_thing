@@ -1,11 +1,14 @@
-script: "./build.sh"
-cache:
-  bundler: true
-  directories:
-  - $HOME/vendor/bundle
-env: BUNDLE_PATH=$HOME/vendor/bundle
+gemfile:
+  - Gemfile
+  - components/annoyance/Gemfile
+  - components/email_signup/Gemfile
+  - components/event_counter/Gemfile
+  - components/teaser/Gemfile
+script:
+  - ./test.sh
 before_install:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
+  - cd $(dirname $BUNDLE_GEMFILE)
 rvm:
   - 2.1.0
