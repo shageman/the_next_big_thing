@@ -8,7 +8,7 @@ gem "teaser", path: "components/teaser"
 gem "annoyance", :path => "components/annoyance"
 
 group :test, :development do
-  gem "rspec-rails", "2.14"
+  gem "rspec-rails", "~> 2.14.1"
   gem "capybara", "2.1.0"
   gem "sqlite3", "1.3.9"
 end
