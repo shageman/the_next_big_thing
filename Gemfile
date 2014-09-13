@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "rails", "4.1.5"
+gem "rails", "4.1.6"
 
 gem "email_signup", path: "components/email_signup"
 gem "event_counter", path: "components/event_counter"
