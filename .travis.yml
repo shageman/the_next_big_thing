@@ -1,9 +1,9 @@
-gemfile:
-  - Gemfile
-  - components/annoyance/Gemfile
-  - components/email_signup/Gemfile
-  - components/event_counter/Gemfile
-  - components/teaser/Gemfile
+#gemfile:
+#  - Gemfile
+#  - components/annoyance/Gemfile
+#  - components/email_signup/Gemfile
+#  - components/event_counter/Gemfile
+#  - components/teaser/Gemfile
 script:
   - ./test.sh
 before_install:
