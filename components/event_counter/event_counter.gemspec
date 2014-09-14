@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "4.1.6"
 
-  s.add_development_dependency "rspec-rails", "2.12.2"
+  s.add_development_dependency "rspec-rails", "3.1.0"
   s.add_development_dependency "shoulda-matchers", "1.4.2"
   s.add_development_dependency "sqlite3", "1.3.7"
 end

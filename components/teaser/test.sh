@@ -10,7 +10,7 @@ bundle exec rspec spec/controllers
 exit_code+=$?
 
 echo "*** Running teaser engine request specs"
-bundle exec rspec spec/requests
+bundle exec rspec spec/features
 exit_code+=$?
 
 echo "*** Running teaser engine javascript specs"

@@ -1,7 +1,7 @@
 require "spec_helper"
 
 module Teaser
-  describe TeaseController do
+  describe TeaseController, type: :controller do
     before do
       controller.stub(:inject_dependencies)
     end
