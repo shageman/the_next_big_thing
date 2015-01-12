@@ -4,6 +4,9 @@ gemspec
 gem 'jasmine-core', github: 'pivotal/jasmine'
 gem 'jasmine', github: 'pivotal/jasmine-gem'
 
-gem "annoyance", path: "../annoyance"
-gem "email_signup", path: "../email_signup"
-gem "event_counter", path: "../event_counter"
+
+path '../' do
+  gem "annoyance"
+  gem "email_signup"
+  gem "event_counter"
+end

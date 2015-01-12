@@ -27,6 +27,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "capybara", "2.4.1"
   s.add_development_dependency "shoulda-matchers", "2.7.0"
   s.add_development_dependency "sqlite3", "1.3.9"
-  s.add_development_dependency "poltergeist", "1.5"
+  s.add_development_dependency "poltergeist", "1.5.1"
   s.add_development_dependency "jasmine", "1.3.2"
 end

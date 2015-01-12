@@ -1,23 +1,11 @@
 PATH
-  remote: components/annoyance
+  remote: components
   specs:
     annoyance (0.0.1)
-
-PATH
-  remote: components/email_signup
-  specs:
     email_signup (0.0.1)
       rails (= 4.1.8)
-
-PATH
-  remote: components/event_counter
-  specs:
     event_counter (0.0.3)
       rails (= 4.1.8)
-
-PATH
-  remote: components/teaser
-  specs:
     teaser (0.0.1)
       annoyance
       email_signup
@@ -150,10 +138,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  annoyance!
   capybara (= 2.4.1)
-  email_signup!
-  event_counter!
   pg
   rails (= 4.1.8)
   rspec-rails (= 3.1.0)
