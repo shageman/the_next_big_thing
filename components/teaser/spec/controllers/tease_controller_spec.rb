@@ -36,11 +36,10 @@ module Teaser
         controller.instance_variable_set "@annoyance_meter", mock_annoyance_meter
         entry_manager = EmailSignup::EntryManager.new
         controller.instance_variable_set "@entry_manager", entry_manager
-        event_counter = EventCounter::Logger.new
-        controller.instance_variable_set "@event_counter", event_counter
-
         entry = entry_manager.create "adam"
-        event_counter.log "email_signup_entry_#{entry.id}", "signup"
+
+        event_counter = EventCounter::TestHelper.new_logger("email_signup_entry_#{entry.id}", "signup", 1)
+        controller.instance_variable_set "@event_counter", event_counter
 
         xhr :post, :create, new_sign_up_entry: "adam", use_route: "teaser"
         response.status.should == 400

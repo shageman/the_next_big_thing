@@ -3,6 +3,7 @@ require File.expand_path("../dummy/config/environment", __FILE__)
 
 require 'rspec/rails'
 require 'shoulda-matchers'
+require 'event_counter/test_helper'
 
 Dir[Teaser::Engine.root.join("spec/support/**/*.rb")].each {|f| require f}
 
