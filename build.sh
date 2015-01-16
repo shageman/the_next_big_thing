@@ -7,6 +7,9 @@ if [ "$CI" == "true" ]; then
   BUNDLE_PATH="$HOME/vendor/bundle"
 fi
 
+# Change working directory to this script's parent directory so we find the right files
+cd "$( dirname "${BASH_SOURCE[0]}" )"
+
 for test_script in $(find . -name test.sh); do
   pushd `dirname $test_script` > /dev/null
   source "$HOME/.rvm/scripts/rvm"
