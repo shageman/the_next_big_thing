@@ -3,9 +3,11 @@
 exit_code=0
 
 echo "*** Running teaser engine specs"
-bundle install | grep Installing
-bundle exec rake db:create db:migrate #don't remove this line. If only run in test our schema.rb doesn't include required engine's migrations
-RAILS_ENV=test bundle exec rake db:create db:migrate
+bundle install  --jobs=3 --retry=3 | grep Installing
+bundle exec rake db:create 
+bundle exec rake db:migrate
+RAILS_ENV=test bundle exec rake db:create 
+RAILS_ENV=test bundle exec rake db:migrate
 bundle exec rspec spec/controllers
 exit_code+=$?
 
