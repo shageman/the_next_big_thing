@@ -19,7 +19,7 @@ Twitter hashtag: #cbra - https://twitter.com/hashtag/cbra
 
 Blog posts:
 
-* http://pivotallabs.com/tag/rails-application-suites/
+* http://blog.pivotal.io/pivotal-labs?s=&category=0&post_tag=1505&author=&archives=
  
 Past presentations by Ben Smith and me (mostly on this topic)
 
